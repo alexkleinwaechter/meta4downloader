@@ -1,17 +1,17 @@
-# Meta4 Downloader
+﻿# Meta4 Downloader
 
 A .NET 8 console application for downloading files from meta4 (metalink) XML files with automatic hash verification and parallel downloads.
 
 ## Features
 
-- ? Parse meta4/metalink XML files
-- ? Parallel file downloads for maximum speed
-- ? Automatic retry with exponential backoff on connection failures
-- ? SHA-256 hash verification for file integrity
-- ? Smart file validation (skips already downloaded files)
-- ? Progress tracking with visual progress bars
-- ? Colored console output for easy status monitoring
-- ? Automatic target directory creation
+- ✅ Parse meta4/metalink XML files
+- ✅ Parallel file downloads for maximum speed
+- ✅ Automatic retry with exponential backoff on connection failures
+- ✅ SHA-256 hash verification for file integrity
+- ✅ Smart file validation (skips already downloaded files)
+- ✅ Progress tracking with visual progress bars
+- ✅ Colored console output for easy status monitoring
+- ✅ Automatic target directory creation
 
 ## Usage
 
@@ -55,46 +55,6 @@ The application supports the standard metalink XML format (urn:ietf:params:xml:n
 </metalink>
 ```
 
-## Console Output
-
-The application provides real-time feedback with:
-
-- **Progress indicators**: Visual progress bars showing download percentage
-- **Status updates**: Color-coded messages for each file
-  - ? Green checkmark: Successfully downloaded
-  - ? Yellow circle: Skipped (already exists with valid hash)
-  - ? Red X: Failed download
-- **Overall progress**: Tracks completion across all files
-- **Summary statistics**: Final report with download counts and total bytes
-
-### Example Output
-
-```
-Starting downloads...
-
-? file1.jp2 [????????????????????] 20.0% (25.0 MB/124.5 MB)
-? file2.j2w - Complete (38 B)
-Overall: [????????????????????] 14.3% (1/7 files, 38 B downloaded)
-
-? file3.j2w - Skipped (valid)
-Overall: [????????????????????] 28.6% (2/7 files, 38 B downloaded)
-
-???????????????????????????????????
-Download Summary:
-  Total files:       7
-  Downloaded:        5
-  Skipped (valid):   2
-  Failed:            0
-  Total downloaded:  650.5 MB
-???????????????????????????????????
-```
-
-## Performance Tips
-
-- **Fast connections**: Use 6-8 concurrent downloads
-- **Moderate connections**: Default 4 concurrent downloads works well
-- **Slow/unstable connections**: Use 2-3 concurrent downloads
-- **Server rate limiting**: Reduce concurrent downloads if you encounter frequent errors
 
 ## Error Handling
 
